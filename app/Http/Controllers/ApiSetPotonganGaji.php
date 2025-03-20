@@ -19,7 +19,7 @@ class ApiSetPotonganGaji extends Controller
         $result = "";
         
         try {
-            $data_collections = SetPotonganGaji::all('*')->toJson();
+            $data_collections = SetPotonganGaji::all('*');
         } catch (\Throwable $th) {
             return response()->json($th, status: 404);
         }
@@ -67,7 +67,7 @@ class ApiSetPotonganGaji extends Controller
         $result = "";
         
         try {
-            $data = SetPotonganGaji::find($id)->toJson();
+            $data = SetPotonganGaji::find($id);
         } catch (\Throwable $th) {
             return response()->json($th, status: 404);
         }

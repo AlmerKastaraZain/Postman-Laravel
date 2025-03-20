@@ -18,7 +18,7 @@ class ApiAdminController extends Controller
         $result = "";
         
         try {
-            $admin_collections = Admin::all('*')->toJson();
+            $admin_collections = Admin::all('*');
         } catch (\Throwable $th) {
             return response()->json($th, status: 404);
         }
@@ -64,7 +64,7 @@ class ApiAdminController extends Controller
         $result = "";
         
         try {
-            $admin_data = Admin::find($id)->toJson();
+            $admin_data = Admin::find($id);
         } catch (\Throwable $th) {
             return response()->json($th, status: 404);
         }

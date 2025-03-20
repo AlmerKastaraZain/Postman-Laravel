@@ -17,7 +17,7 @@ class ApiDataAbsensiController extends Controller
         $result = "";
         
         try {
-            $data_collections = DataAbsensi::all('*')->toJson();
+            $data_collections = DataAbsensi::all('*');
         } catch (\Throwable $th) {
             return response()->json($th, 404);
         }
@@ -65,7 +65,7 @@ class ApiDataAbsensiController extends Controller
         $result = "";
         
         try {
-            $data = DataAbsensi::find($id)->toJson();
+            $data = DataAbsensi::find($id);
         } catch (\Throwable $th) {
             return response()->json($th, status: 404);
         }

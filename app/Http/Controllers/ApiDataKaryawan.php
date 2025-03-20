@@ -21,7 +21,7 @@ class ApiDataKaryawan extends Controller
         $result = "";
         
         try {
-            $data_collections = DataKaryawan::all('*')->toJson();
+            $data_collections = DataKaryawan::all('*');
         } catch (\Throwable $th) {
             return response()->json($th, status: 404);
         }
@@ -77,7 +77,7 @@ class ApiDataKaryawan extends Controller
         $result = "";
         
         try {
-            $data = DataKaryawan::find($id)->toJson();
+            $data = DataKaryawan::find($id);
         } catch (\Throwable $th) {
             return response()->json($th, status: 404);
         }

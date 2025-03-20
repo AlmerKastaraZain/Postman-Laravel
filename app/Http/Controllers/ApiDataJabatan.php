@@ -71,7 +71,7 @@ class ApiDataJabatan extends Controller
         $result = "";
         
         try {
-            $data = DataJabatan::find($id)->toJson();
+            $data = DataJabatan::find($id);
         } catch (\Throwable $th) {
             return response()->json($th, status: 404);
         }

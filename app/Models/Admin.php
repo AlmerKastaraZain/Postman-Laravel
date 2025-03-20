@@ -26,9 +26,9 @@ class Admin extends Authenticatable
      *
      * @var list<string>
      */
-    protected $hidden = [
-        'password',
-    ];
+    // protected $hidden = [
+    //     'password',
+    // ];
 
         /**
      * Get the attributes that should be cast.
@@ -36,11 +36,11 @@ class Admin extends Authenticatable
      * @return array<string, string>
      */
     
-    protected function casts(): array
-    {
-        return [
-            'password' => 'hashed',
-        ];
-    }
+    // protected function casts(): array
+    // {
+    //     return [
+    //         'password' => 'hashed',
+    //     ];
+    // }
 
 }
