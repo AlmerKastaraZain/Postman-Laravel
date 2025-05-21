@@ -19,7 +19,7 @@ class ApiDataJabatan extends Controller
         $result = "";
         
         try {
-            $data_collections = DataJabatan::all('*')->toJson();
+            $data_collections = DataJabatan::all('*');
         } catch (\Throwable $th) {
             return response()->json($th, status: 404);
         }
